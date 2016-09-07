@@ -4,7 +4,7 @@
 
 ## 效果
 
-![](http://7sbl54.com1.z0.glb.clouddn.com/sample.gif)
+![](https://raw.githubusercontent.com/mzule/FantasySlide/master/sample.gif)
 
 
 ## 使用方法
