@@ -42,6 +42,16 @@ public class FantasyDrawerLayout extends DrawerLayout implements DrawerLayout.Dr
         addDrawerListener(this);
     }
 
+    public void openDrawer(View drawerView) {
+        super.openDrawer(drawerView);
+        currentSideBar = (SideBarWithBg) drawerView;
+    }
+
+    public void openDrawer(int gravity) {
+        super.openDrawer(gravity);
+        currentSideBar = GravityUtil.isLeft(gravity) ? leftSideBar : rightSideBar;
+    }
+
     /**
      * 对 child view 进行分裂,得到一个 contentLayout 和 两个 SideBar
      */
