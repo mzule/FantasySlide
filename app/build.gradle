@@ -22,5 +22,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.1.1'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'me.imid.swipebacklayout.lib:library:1.0.0'
-    compile project(':library')
+    compile 'com.github.mzule.fantasyslide:library:1.0.1'
 }

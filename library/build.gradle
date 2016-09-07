@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/mzule/FantasySlide/'
     gitUrl = 'https://github.com/mzule/FantasySlide.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
 
     developerId = 'mzule'
     developerName = 'Cao Dongping'
@@ -44,7 +44,6 @@ android {
 
 dependencies {
     compile 'com.android.support:appcompat-v7:23.2.0'
-    testCompile 'junit:junit:4.12'
 }
 
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'

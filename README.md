@@ -12,7 +12,7 @@
 ### 添加依赖
 
 ``` groovy
-compile 'com.github.mzule.fantasyslide:library:1.0.0'
+compile 'com.github.mzule.fantasyslide:library:1.0.1'
 ```
 
 ### 调用
