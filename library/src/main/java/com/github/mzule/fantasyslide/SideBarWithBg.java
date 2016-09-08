@@ -2,7 +2,6 @@ package com.github.mzule.fantasyslide;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.support.v4.widget.DrawerLayout;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
@@ -44,9 +43,7 @@ class SideBarWithBg extends RelativeLayout {
         addView(bgView, 0, new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 
         // 将背景色转移给 bgView, 并清除 sideBar 自身的背景色
-        if (sideBar.getBackground() instanceof ColorDrawable) {
-            bgView.setColor(((ColorDrawable) sideBar.getBackground()).getColor());
-        }
+        bgView.setDrawable(sideBar.getBackground());
         sideBar.setBackgroundColor(Color.TRANSPARENT);
         sideBar.setParentLayoutGravity(parentLayoutGravity);
 

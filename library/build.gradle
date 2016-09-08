@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/mzule/FantasySlide/'
     gitUrl = 'https://github.com/mzule/FantasySlide.git'
 
-    libraryVersion = '1.0.3'
+    libraryVersion = '1.0.4'
 
     developerId = 'mzule'
     developerName = 'Cao Dongping'

@@ -1,9 +1,16 @@
 package com.github.mzule.fantasyslide;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.Shader;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -15,6 +22,8 @@ class SideBarBgView extends View {
     private Paint paint;
     private Path path;
     private int parentLayoutGravity;
+    private boolean drawableProcessed;
+    private Drawable drawable;
 
     public SideBarBgView(Context context) {
         super(context);
@@ -63,13 +72,36 @@ class SideBarBgView extends View {
         invalidate();
     }
 
-    public void setColor(int color) {
-        paint.setColor(color);
-    }
-
     @Override
     protected void onDraw(Canvas canvas) {
+        if (drawable != null && !drawableProcessed) {
+            drawableProcessed = true;
+            paint.setShader(createShader());
+        }
         paint.setStyle(Paint.Style.FILL);
         canvas.drawPath(path, paint);
+    }
+
+    @NonNull
+    private Shader createShader() {
+        Bitmap bitmap;
+        if (drawable instanceof BitmapDrawable) {
+            bitmap = ((BitmapDrawable) drawable).getBitmap();
+        } else {
+            bitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
+            Canvas c = new Canvas(bitmap);
+            drawable.setBounds(0, 0, getWidth(), getHeight());
+            drawable.draw(c);
+        }
+        return new BitmapShader(bitmap, Shader.TileMode.REPEAT, Shader.TileMode.REPEAT);
+    }
+
+    public void setDrawable(Drawable drawable) {
+        if (drawable instanceof ColorDrawable) {
+            paint.setColor(((ColorDrawable) drawable).getColor());
+        } else {
+            this.drawable = drawable;
+            this.drawableProcessed = false;
+        }
     }
 }

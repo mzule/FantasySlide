@@ -79,7 +79,7 @@
             android:layout_width="133dp"
             android:layout_height="match_parent"
             android:layout_gravity="end"
-            android:background="#455A64"
+            android:background="@drawable/bg_right_bar"
             android:gravity="center_vertical|right"
             app:maxTranslationX="-33dp">
 
