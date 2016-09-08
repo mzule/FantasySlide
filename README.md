@@ -59,7 +59,7 @@ compile 'com.github.mzule.fantasyslide:library:1.0.4'
 
 通过设置 maxTranslationX 可以设置菜单项动画的最大位移。仅有在采用默认 Transformer 时才有效。
 
-```
+``` xml
 <com.github.mzule.fantasyslide.SideBar
 	...
     app:maxTranslationX="88dp">
