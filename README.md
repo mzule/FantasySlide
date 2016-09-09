@@ -1,6 +1,8 @@
 # FantasySlide
 
-一个 DrawerLayout 的扩展,具有帅气的动画效果。
+一个 DrawerLayout 的扩展,具有帅气的动画与创新的交互。一次手势完成滑出侧边栏与选择菜单。欢迎下载 demo 体验。
+
+<https://raw.githubusercontent.com/mzule/FantasySlide/master/demo.apk>
 
 ## 效果
 
