@@ -51,7 +51,8 @@ compile 'com.github.mzule.fantasyslide:library:1.0.4'
 
 1. 最外层的 FantasyDrawerLayout 的使用与官方的 DrawerLayout 完全一致。
 2. SideBar 用来包装每一个菜单项，SideBar 本质上可以当做一个 vertical 的 LinearLayout 来使用。
-3. 详细参考 <https://github.com/mzule/FantasySlide/blob/master/app/src/main/res/layout/activity_main.xml>
+3. 效果图上的文字变色是表示该菜单处于 hover 状态, hover 状态默认会设定 view 的 pressed 状态为 true。可以通过 Listener 来改写, 下文会有详细说明。
+4. 详细参考 <https://github.com/mzule/FantasySlide/blob/master/app/src/main/res/layout/activity_main.xml>
 
 
 
