@@ -1,5 +1,10 @@
 # FantasySlide
 
+[![DOWNLOAD](https://api.bintray.com/packages/mzule/maven/fantasy-slide/images/download.svg)](https://bintray.com/mzule/maven/fantasy-slide/_latestVersion)
+[![API](https://img.shields.io/badge/API-15%2B-orange.svg?style=flat)](https://android-arsenal.com/api?level=15)
+<a href="http://www.methodscount.com/?lib=com.github.mzule.fantasyslide%3Alibrary%3A1.0.4"><img src="https://img.shields.io/badge/Methods and size-core: 142 | deps: 15054 | 24 KB-e91e63.svg"/></a>
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-FantasySlide-green.svg?style=flat)](http://android-arsenal.com/details/1/4309)
+
 一个 DrawerLayout 的扩展,具有帅气的动画与创新的交互。一次手势完成滑出侧边栏与选择菜单。欢迎下载 demo 体验。
 
 <https://raw.githubusercontent.com/mzule/FantasySlide/master/demo.apk>
