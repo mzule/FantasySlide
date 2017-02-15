@@ -49,12 +49,12 @@ public class MainActivity extends AppCompatActivity {
         SideBar leftSideBar = (SideBar) findViewById(R.id.leftSideBar);
         leftSideBar.setFantasyListener(new SimpleFantasyListener() {
             @Override
-            public boolean onHover(@Nullable View view) {
+            public boolean onHover(@Nullable View view, int index) {
                 tipView.setVisibility(View.VISIBLE);
                 if (view instanceof TextView) {
-                    tipView.setText(((TextView) view).getText());
+                    tipView.setText(String.format("%s at %d", ((TextView) view).getText().toString(), index));
                 } else if (view != null && view.getId() == R.id.userInfo) {
-                    tipView.setText("个人中心");
+                    tipView.setText(String.format("个人中心 at %d", index));
                 } else {
                     tipView.setText(null);
                 }
@@ -63,8 +63,9 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public boolean onSelect(View view) {
+            public boolean onSelect(View view, int index) {
                 tipView.setVisibility(View.INVISIBLE);
+                Toast.makeText(MainActivity.this, String.format("%d selected", index), Toast.LENGTH_SHORT).show();
                 return false;
             }
 

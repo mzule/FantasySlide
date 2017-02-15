@@ -9,12 +9,12 @@ import android.view.View;
 
 public class SimpleFantasyListener implements FantasyListener {
     @Override
-    public boolean onHover(@Nullable View view) {
+    public boolean onHover(@Nullable View view, int index) {
         return false;
     }
 
     @Override
-    public boolean onSelect(View view) {
+    public boolean onSelect(View view, int index) {
         return false;
     }
 

@@ -52,14 +52,14 @@ public class SideBar extends LinearLayout {
             boolean inHover = opened && child.getTop() < y && child.getBottom() > y;
             if (inHover) {
                 found = true;
-                if (fantasyListener == null || !fantasyListener.onHover(child)) {
+                if (fantasyListener == null || !fantasyListener.onHover(child, i)) {
                     child.setPressed(true);
                 }
             }
             transformer.apply((ViewGroup) getParent(), child, y, percent, GravityUtil.isLeft(parentLayoutGravity));
         }
         if (opened && !found && fantasyListener != null) {
-            fantasyListener.onHover(null);
+            fantasyListener.onHover(null, -1);
         }
     }
 
@@ -67,7 +67,7 @@ public class SideBar extends LinearLayout {
         for (int i = 0; opened && i < getChildCount(); i++) {
             View child = getChildAt(i);
             if (child.isPressed()) {
-                if (fantasyListener == null || !fantasyListener.onSelect(child)) {
+                if (fantasyListener == null || !fantasyListener.onSelect(child, i)) {
                     child.performClick();
                 }
                 return;
